@@ -1,10 +1,7 @@
 /* CSS HEX */
 :root {
   --alabaster: #d8e2dcff;
-  --glaucous: #758ecdff;
-  --lavender-blue: #c1cefeff;
-  --cornflower-blue: #7189ffff;
-  --plump-purple: #624cabff;
+  --icy-white: #f7f7f7;
   --yellow-green-crayola: #cef7a0ff;
   --cyan-blue: #b2dce5;
 }
@@ -15,6 +12,7 @@
   box-sizing: border-box;
   margin-block-start: 0px;
   margin-block-end: 0px;
+  font-family: "Fredoka One", cursive;
 }
 
 body {
@@ -83,7 +81,7 @@ body {
 .card-top .overlay h1 {
   text-align: center;
   font-weight: 500;
-  color: #fff;
+  color: var(--icy-white);
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -95,7 +93,7 @@ body {
   width: 0;
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
-  border-top: 1.5em solid #b2dce5;
+  border-top: 1.5em solid var(--cyan-blue);
   margin: 0 auto -1.75em auto;
   top: -0.25em;
   z-index: 20;
@@ -103,7 +101,7 @@ body {
 
 .card-middle {
   display: none;
-  background: #efefef;
+  background: var(--cornflower-blue);
   padding: 2em 1em 1em 1em;
 }
 .card-middle .more {
@@ -112,7 +110,7 @@ body {
 }
 
 .card-bottom {
-  background: #f7f7f7;
+  background: var(--icy-white);
   padding: 1.75em 1em 1em 1em;
   border-bottom-left-radius: 0.75em;
   border-bottom-right-radius: 0.75em;
