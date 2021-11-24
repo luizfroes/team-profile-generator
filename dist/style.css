@@ -1,0 +1,26 @@
+/* CSS HEX */
+:root {
+  --alabaster: #d8e2dcff;
+  --glaucous: #758ecdff;
+  --lavender-blue: #c1cefeff;
+  --cornflower-blue: #7189ffff;
+  --plump-purple: #624cabff;
+  --yellow-green-crayola: #cef7a0ff;
+}
+
+body {
+  background-image: url("./assets/images/background-img.png");
+  height: 100%;
+  width: 100%;
+}
+
+.header-banner {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  background-color: var(--yellow-green-crayola);
+}
+
+.header {
+  font-family: "Fredoka One", cursive;
+}
