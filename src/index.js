@@ -27,12 +27,14 @@ const start = async () => {
     const { role } = await inquirer.prompt(loopQuestion);
 
     if (role === "Engineer") {
+      //get engineer answers
       const engineerAnswers = await inquirer.prompt(engineerQuestions);
       engineerAnswers.role = role;
       roleAnswers.push(engineerAnswers);
     }
 
     if (role === "Intern") {
+      //get intern answers
       const internAnswers = await inquirer.prompt(internQuestions);
       internAnswers.role = role;
       roleAnswers.push(internAnswers);
