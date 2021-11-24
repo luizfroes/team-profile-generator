@@ -13,30 +13,38 @@ const {
 const start = async () => {
   let inProgress = true;
 
+  const roleAnswers = [];
+
   //get team name
   const teamName = await inquirer.prompt(teamQuestion);
 
-  while (inProgress) {
-    const role = await inquirer.prompt(loopQuestion);
+  //get manager answers
+  const managerAnswers = await inquirer.prompt(managerQuestions);
+  managerAnswers.role = "Manager";
+  roleAnswers.push(managerAnswers);
 
-    if (role === "Manager") {
-      const managerAnswers = await inquirer.prompt(managerQuestions);
-    }
+  while (inProgress) {
+    const { role } = await inquirer.prompt(loopQuestion);
 
     if (role === "Engineer") {
-      const managerAnswers = await inquirer.prompt(engineerQuestions);
+      const engineerAnswers = await inquirer.prompt(engineerQuestions);
+      engineerAnswers.role = role;
+      roleAnswers.push(engineerAnswers);
     }
 
     if (role === "Intern") {
       const internAnswers = await inquirer.prompt(internQuestions);
+      internAnswers.role = role;
+      roleAnswers.push(internAnswers);
     }
 
     if (role === "None") {
       inProgress = false;
     }
   }
-
+  console.log(roleAnswers);
   //build answers object
+  //constructAnswersObject(teamName, roleAnswers);
 
   //generate HTML
 
