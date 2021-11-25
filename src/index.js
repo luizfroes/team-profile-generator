@@ -71,7 +71,7 @@ const start = async () => {
   const html = generateHtml(answers);
 
   //Write to file
-  writeToFile(".dist/index.html", html);
+  writeToFile("./dist/index.html", html);
 };
 
 start();

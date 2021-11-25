@@ -1,7 +1,21 @@
-describe("Engineer", () => {
-  test("should be an instance of Engineer", () => {});
+const { Engineer } = require(".");
 
-  test("should return the expected name", () => {});
+describe("Engineer", () => {
+  const mockEngineer = new Engineer({
+    github: "ver",
+    name: "ali",
+    id: "ter",
+    email: "outre",
+  });
+
+  test("should be an instance of Engineer", () => {
+    expect(mockEngineer).toBeInstanceOf(Engineer);
+  });
+
+  test("should return the expected name", () => {
+    const actual = "ali";
+    expect(mockEngineer.getName()).toEqual(actual);
+  });
 
   test("should return the expected id", () => {});
 
