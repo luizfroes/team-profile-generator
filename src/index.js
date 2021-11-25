@@ -1,7 +1,8 @@
 //import inquirer
 const inquirer = require("inquirer");
+
+//import classes
 const { Engineer, Manager, Intern } = require("./lib");
-const Employee = require("./lib/employee");
 
 // import questions
 const {
@@ -11,7 +12,7 @@ const {
   engineerQuestions,
   internQuestions,
 } = require("./modules/questions");
-const { constructAnswersObject } = require("./modules/utils");
+const { constructAnswersObject, generateHtml } = require("./modules/utils");
 
 const start = async () => {
   let inProgress = true;
@@ -56,12 +57,14 @@ const start = async () => {
       inProgress = false;
     }
   }
-  console.log(employees);
 
   //build answers object
-  constructAnswersObject(teamName, employees);
+  const answers = constructAnswersObject(teamName, employees);
 
   //generate HTML
+  const html = generateHtml(answers);
+
+  console.log(html);
 
   //Write to file
 };
