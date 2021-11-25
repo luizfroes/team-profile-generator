@@ -7,7 +7,21 @@ class Intern extends Employee {
     this.school = school;
   }
 
-  getSchool() {}
+  getName() {
+    return Intern.name;
+  }
+
+  getId() {
+    return Intern.id;
+  }
+
+  getEmail() {
+    return Intern.email;
+  }
+
+  getSchool() {
+    return Intern.school;
+  }
 
   getRole() {
     return "Intern";
