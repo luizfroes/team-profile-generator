@@ -8,53 +8,52 @@ class Engineer extends Employee {
   }
 
   getName() {
-    return Engineer.name;
+    return this.name;
   }
 
   getId() {
-    return Engineer.id;
+    return this.id;
   }
 
   getEmail() {
-    return Engineer.email;
+    return this.email;
   }
 
   getGithub() {
-    return Engineer.github;
+    return this.github;
   }
 
   getRole() {
+    super.getRole();
     return "Engineer";
   }
 
   generateCard() {
+    super.generateCard();
     return `<div class="row">
     <div class="card">
-      <div class="card-top">
-        <div class="overlay">
-          <h1>READ</h1>
+        <div class="card-top">
+          <img class="card-img" src="./assets/images/engineer-icon.png" />
         </div>
-        <img class="card-img" src="./assets/images/engineer-icon.png" />
-      </div>
-      <div class="triangle">
-        <div class="circle-button">
-          <img
-            class="close"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/324479/close.svg"
-          />
+        <div class="triangle">
+          <div class="circle-button">
+            <img
+              class="close"
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/324479/close.svg"
+            />
+          </div>
         </div>
-      </div>
-      <div class="card-middle">
-        <h5 class="more">Name: ${this.name}</h5>
-        <h5 class="more">ID: ${this.id}</h5>
-        <h5 class="more">Email: <a href="mailto:${this.email}">${this.email}</a></h5>
-        <h5 class="more">GitHub: <a href="https://github.com/${this.github}">${this.github}</a></h5>
-      </div>
-      <div class="card-bottom text-center">
-        <h2 class="card-title">Engineer</h2>
-      </div>
+        <div class="card-middle">
+          <h5 class="more">Name: ${this.name}</h5>
+          <h5 class="more">ID: ${this.id}</h5>
+          <h5 class="more">Email: <a href="mailto:${this.email}">${this.email}</a></h5>
+          <h5 class="more">GitHub: <a href="https://github.com/${this.github}">${this.github}</a></h5>
+        </div>
+        <div class="card-bottom text-center">
+          <h2 class="card-title">Engineer</h2>
+        </div>
     </div>
-  </div>`;
+    </div>`;
   }
 }
 
