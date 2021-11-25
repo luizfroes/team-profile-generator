@@ -26,6 +26,7 @@ body {
   justify-content: center;
   padding: 3rem;
   background-color: var(--yellow-green-crayola);
+  width: 100%;
 }
 
 .header {
