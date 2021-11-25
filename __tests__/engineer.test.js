@@ -2,10 +2,10 @@ const { Engineer } = require("../src/lib");
 
 describe("Engineer", () => {
   const mockEngineer = new Engineer({
-    github: "ver",
-    name: "ali",
-    id: "ter",
-    email: "outre",
+    github: "bsmith",
+    name: "Bob Smith",
+    id: "man15",
+    email: "bobsmith@email.com",
   });
 
   test("should be an instance of Engineer", () => {
@@ -13,15 +13,27 @@ describe("Engineer", () => {
   });
 
   test("should return the expected name", () => {
-    const actual = "ali";
+    const actual = "Bob Smith";
     expect(mockEngineer.getName()).toEqual(actual);
   });
 
-  test("should return the expected id", () => {});
+  test("should return the expected id", () => {
+    const actual = "man15";
+    expect(mockEngineer.getId()).toEqual(actual);
+  });
 
-  test("should return the expected email", () => {});
+  test("should return the expected email", () => {
+    const actual = "bobsmith@email.com";
+    expect(mockEngineer.getEmail()).toEqual(actual);
+  });
 
-  test("should return the expected github", () => {});
+  test("should return the expected github", () => {
+    const actual = "bsmith";
+    expect(mockEngineer.getGithub()).toEqual(actual);
+  });
 
-  test("should return the role", () => {});
+  test("should return the role", () => {
+    const actual = "Engineer";
+    expect(mockEngineer.getRole()).toEqual(actual);
+  });
 });
