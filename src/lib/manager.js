@@ -26,6 +26,36 @@ class Manager extends Employee {
   getRole() {
     return "Manager";
   }
+
+  generateCard() {
+    return ` <div class="row">
+    <div class="card">
+      <div class="card-top">
+        <div class="overlay">
+          <h1>READ</h1>
+        </div>
+        <img class="card-img" src="./assets/images/manager-icon.png" />
+      </div>
+      <div class="triangle">
+        <div class="circle-button">
+          <img
+            class="close"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/324479/close.svg"
+          />
+        </div>
+      </div>
+      <div class="card-middle">
+        <h5 class="more">Name: ${this.name}</h5>
+        <h5 class="more">ID: ${this.id}</h5>
+        <h5 class="more">Email: <a href="mailto:${this.email}">${this.email}</a></h5>
+        <h5 class="more">Office Number: ${this.officeNumber}</h5>
+      </div>
+      <div class="card-bottom text-center">
+        <h2 class="card-title">Manager</h2>
+      </div>
+    </div>
+  </div>`;
+  }
 }
 
 module.exports = Manager;
