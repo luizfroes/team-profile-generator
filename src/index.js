@@ -26,7 +26,7 @@ const start = async () => {
   const employees = [];
 
   //get team name
-  const teamName = await inquirer.prompt(teamQuestion);
+  const { teamName } = await inquirer.prompt(teamQuestion);
 
   //get manager answers
   const { name, id, email, officeNumber } = await inquirer.prompt(
@@ -44,6 +44,7 @@ const start = async () => {
       const { name, id, email, github } = await inquirer.prompt(
         engineerQuestions
       );
+
       const engineer = new Engineer({ name, id, email, github });
 
       employees.push(engineer);

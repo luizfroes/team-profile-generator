@@ -82,7 +82,7 @@ const categorizeEmployees = (employees) =>
 const constructAnswersObject = (teamName, employees) => {
   const answers = {};
 
-  answers.teamName = teamName.teamName;
+  answers.teamName = teamName;
 
   const categorizedEmployees = categorizeEmployees(employees);
 

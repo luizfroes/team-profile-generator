@@ -1,5 +1,5 @@
-const Engineer = require("./engineer");
-const Intern = require("./intern");
-const Manager = require("./manager");
+const Engineer = require("./Engineer");
+const Intern = require("./Intern");
+const Manager = require("./Manager");
 
 module.exports = { Manager, Engineer, Intern };
