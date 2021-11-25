@@ -1,9 +1,6 @@
 //import fs
 const fs = require("fs");
 
-//import classes
-const { Manager, Engineer, Intern } = require("../lib");
-
 const generateHtml = ({ teamName, managers, engineers, interns }) => {
   console.log(teamName);
   return `<!DOCTYPE html>
