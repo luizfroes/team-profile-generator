@@ -33,17 +33,17 @@ const generateHtml = ({ teamName, managers, engineers, interns }) => {
         <div class="d-flex justify-content-around flex-wrap">
         ${
           managers.length
-            ? managers.map((Manager) => Manager.generateCard()).join("")
+            ? managers.map((manager) => manager.generateCard()).join("")
             : ""
         }
         ${
           engineers.length
-            ? engineers.map((Engineer) => Engineer.generateCard()).join("")
+            ? engineers.map((engineer) => engineer.generateCard()).join("")
             : ""
         }
         ${
           interns.length
-            ? interns.map((Intern) => Intern.generateCard()).join("")
+            ? interns.map((intern) => intern.generateCard()).join("")
             : ""
         }
         </div>

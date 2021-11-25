@@ -12,12 +12,10 @@ class Intern extends Employee {
   }
 
   getRole() {
-    super.getRole();
     return "Intern";
   }
 
   generateCard() {
-    super.generateCard();
     return `<div class="row">
     <div class="card">
         <div class="card-top">

@@ -12,12 +12,10 @@ class Manager extends Employee {
   }
 
   getRole() {
-    super.getRole();
     return "Manager";
   }
 
   generateCard() {
-    super.generateCard();
     return `<div class="row">
     <div class="card">
         <div class="card-top">
