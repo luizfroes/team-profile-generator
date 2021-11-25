@@ -1,80 +1,8 @@
+//import fs
+const fs = require("fs");
+
 //import classes
 const { Manager, Engineer, Intern } = require("../lib");
-
-// const generateManagerCard = (managers) => {
-//   return `<div class="row">
-//   <div class="card">
-//     <div class="card-top">
-//       <div class="overlay">
-//         <h1>READ</h1>
-//       </div>
-//       <img class="card-img" src="./assets/images/manager-icon.png" />
-//     </div>
-//     <div class="triangle">
-//       <div class="circle-button">
-//         <img
-//           class="close"
-//           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/324479/close.svg"
-//         />
-//       </div>
-//     </div>
-//     ${managers.map((Manager) => Manager.generateCard()).join("")}
-//     <div class="card-bottom text-center">
-//       <h2 class="card-title">Manager</h2>
-//     </div>
-//   </div>
-// </div>`;
-// };
-
-// const generateEngineerCard = (engineers) => {
-//   return `<div class="row">
-//   <div class="card">
-//     <div class="card-top">
-//       <div class="overlay">
-//         <h1>READ</h1>
-//       </div>
-//       <img class="card-img" src="./assets/images/engineer-icon.png" />
-//     </div>
-//     <div class="triangle">
-//       <div class="circle-button">
-//         <img
-//           class="close"
-//           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/324479/close.svg"
-//         />
-//       </div>
-//     </div>
-//     ${engineers.map((Engineer) => Engineer.generateCard()).join("")}
-//     <div class="card-bottom text-center">
-//       <h2 class="card-title">Engineer</h2>
-//     </div>
-//   </div>
-// </div>`;
-// };
-
-// const generateInternCard = (interns) => {
-//   return `<div class="row">
-//   <div class="card">
-//     <div class="card-top">
-//       <div class="overlay">
-//         <h1>READ</h1>
-//       </div>
-//       <img class="card-img" src="./assets/images/intern-icon.png" />
-//     </div>
-//     <div class="triangle">
-//       <div class="circle-button">
-//         <img
-//           class="close"
-//           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/324479/close.svg"
-//         />
-//       </div>
-//     </div>
-//     ${interns.map((Intern) => Intern.generateCard()).join("")}
-//     <div class="card-bottom text-center">
-//       <h2 class="card-title">Intern</h2>
-//     </div>
-//   </div>
-// </div>`;
-// };
 
 const generateHtml = ({ teamName, managers, engineers, interns }) => {
   console.log(teamName);
@@ -177,8 +105,18 @@ const validateInput = (input) => {
   return true;
 };
 
+// write to file
+const writeToFile = (filePath, data) => {
+  try {
+    fs.writeFileSync(filePath, data);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 module.exports = {
   validateInput,
   constructAnswersObject,
   generateHtml,
+  writeToFile,
 };

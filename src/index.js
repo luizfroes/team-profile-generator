@@ -12,7 +12,13 @@ const {
   engineerQuestions,
   internQuestions,
 } = require("./modules/questions");
-const { constructAnswersObject, generateHtml } = require("./modules/utils");
+
+//import utils
+const {
+  constructAnswersObject,
+  generateHtml,
+  writeToFile,
+} = require("./modules/utils");
 
 const start = async () => {
   let inProgress = true;
@@ -64,9 +70,8 @@ const start = async () => {
   //generate HTML
   const html = generateHtml(answers);
 
-  console.log(html);
-
   //Write to file
+  writeToFile(".dist/index.html", html);
 };
 
 start();
