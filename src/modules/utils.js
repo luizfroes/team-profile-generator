@@ -2,7 +2,6 @@
 const fs = require("fs");
 
 const generateHtml = ({ teamName, managers, engineers, interns }) => {
-  console.log(teamName);
   return `<!DOCTYPE html>
   <html lang="en">
     <head>
