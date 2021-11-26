@@ -95,9 +95,15 @@ const constructAnswersObject = (teamName, employees) => {
   return answers;
 };
 
-const validateInput = (input) => {
+const validateString = (input) => {
+  const numberInput = input;
+
   if (!input) {
     return "This field cannot be empty!";
+  }
+
+  if (!isNaN(numberInput)) {
+    return "This input should not be a number!";
   }
   return true;
 };
@@ -110,7 +116,7 @@ const validateNumber = (input) => {
   }
 
   if (isNaN(numberInput) || numberInput <= 0) {
-    return "This input should be a valid number";
+    return "This input should be a valid number!";
   }
   return true;
 };
@@ -125,7 +131,7 @@ const writeToFile = (filePath, data) => {
 };
 
 module.exports = {
-  validateInput,
+  validateString,
   constructAnswersObject,
   generateHtml,
   writeToFile,

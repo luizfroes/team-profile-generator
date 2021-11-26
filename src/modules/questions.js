@@ -1,11 +1,11 @@
-const { validateInput, validateNumber } = require("./utils");
+const { validateInput, validateNumber, validateString } = require("./utils");
 
 const teamQuestion = [
   {
     type: "input",
     name: "teamName",
     message: "Enter the Team name:",
-    validate: validateInput,
+    validate: validateString,
   },
 ];
 
@@ -14,19 +14,19 @@ const managerQuestions = [
     type: "input",
     name: "name",
     message: "Enter the Manager name:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "id",
     message: "Enter the Manager employee ID:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "email",
     message: "Enter the Manager email:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
@@ -41,25 +41,25 @@ const engineerQuestions = [
     type: "input",
     name: "name",
     message: "Enter the Engineer name:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "id",
     message: "Enter the Engineer employee ID:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "email",
     message: "Enter the Engineer email:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "github",
     message: "Enter the Engineer GitHub username:",
-    validate: validateInput,
+    validate: validateString,
   },
 ];
 
@@ -68,25 +68,25 @@ const internQuestions = [
     type: "input",
     name: "name",
     message: "Enter the Intern name:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "id",
     message: "Enter the Intern employee ID:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "email",
     message: "Enter the Intern email:",
-    validate: validateInput,
+    validate: validateString,
   },
   {
     type: "input",
     name: "school",
     message: "Enter the Intern School name:",
-    validate: validateInput,
+    validate: validateString,
   },
 ];
 
