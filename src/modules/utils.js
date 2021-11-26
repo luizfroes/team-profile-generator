@@ -102,6 +102,19 @@ const validateInput = (input) => {
   return true;
 };
 
+const validateNumber = (input) => {
+  const numberInput = Number(input);
+
+  if (!input) {
+    return "This field cannot be empty!";
+  }
+
+  if (isNaN(numberInput) || numberInput <= 0) {
+    return "This input should be a valid number";
+  }
+  return true;
+};
+
 // write to file
 const writeToFile = (filePath, data) => {
   try {
@@ -116,4 +129,5 @@ module.exports = {
   constructAnswersObject,
   generateHtml,
   writeToFile,
+  validateNumber,
 };

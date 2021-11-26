@@ -1,4 +1,4 @@
-const { validateInput } = require("./utils");
+const { validateInput, validateNumber } = require("./utils");
 
 const teamQuestion = [
   {
@@ -32,7 +32,7 @@ const managerQuestions = [
     type: "input",
     name: "officeNumber",
     message: "Enter the Manager office number:",
-    validate: validateInput,
+    validate: validateNumber,
   },
 ];
 
