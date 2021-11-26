@@ -89,12 +89,29 @@ npm run test
 
 ### Wireframes
 
-![Wireframe for index](./assets/images/wireframes/index-wf.png)
-![Wireframe for index](./assets/images/wireframes/index-wf-sm.png)
+#### Large viewport Wireframe
+
+![Wireframe for index](./assets/images/team-profile-generator-Page-1.png) ![Wireframe for index](./assets/images/team-profile-generator-Page-2.png)
+
+![Wireframe for index](./assets/images/team-profile-generator-Page-2.png)
+
+#### Small viewport Wireframe
+
+![Wireframe for index](./assets/images/team-profile-generator-Page-3.png)
 
 ### Final Website
 
-![Screen-shot of webpage](./assets/images/wireframes/index-ss.png)
+#### Large viewport Website
+
+![Screen-shot of webpage](./assets/images/webpage-1.png)
+
+![Screen-shot of webpage](./assets/images/webpage-2.png)
+
+#### Small viewport Website
+
+![Screen-shot of webpage](./assets/images/webpage-3.png)
+
+![Screen-shot of webpage](./assets/images/webpage-4.png)
 
 ## Video Walkthrough
 
