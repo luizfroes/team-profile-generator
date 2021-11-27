@@ -1,4 +1,9 @@
-const { validateInput, validateNumber, validateString } = require("./utils");
+const {
+  validateInput,
+  validateNumber,
+  validateString,
+  validateEmail,
+} = require("./utils");
 
 const teamQuestion = [
   {
@@ -26,7 +31,7 @@ const managerQuestions = [
     type: "input",
     name: "email",
     message: "Enter the Manager email:",
-    validate: validateString,
+    validate: validateEmail,
   },
   {
     type: "input",

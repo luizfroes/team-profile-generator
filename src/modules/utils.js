@@ -120,6 +120,13 @@ const validateNumber = (input) => {
   return true;
 };
 
+const validateEmail = (input) => {
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)) {
+    return "You have entered an invalid email address!";
+  }
+  return true;
+};
+
 // write to file
 const writeToFile = (filePath, data) => {
   try {
@@ -135,4 +142,5 @@ module.exports = {
   generateHtml,
   writeToFile,
   validateNumber,
+  validateEmail,
 };
