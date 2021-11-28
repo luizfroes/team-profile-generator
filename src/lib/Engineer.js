@@ -33,7 +33,7 @@ class Engineer extends Employee {
           <h5 class="more">Name: ${this.name}</h5>
           <h5 class="more">ID: ${this.id}</h5>
           <h5 class="more">Email: <a href="mailto:${this.email}">${this.email}</a></h5>
-          <h5 class="more">GitHub: <a href="https://github.com/${this.github}">${this.github}</a></h5>
+          <h5 class="more">GitHub: <a href="https://github.com/${this.github} target="_blank">${this.github}</a></h5>
         </div>
         <div class="card-bottom text-center">
           <h2 class="card-title">Engineer</h2>
