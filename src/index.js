@@ -73,6 +73,8 @@ const start = async () => {
 
   //Write to file
   writeToFile("./dist/index.html", html);
+
+  process.exit();
 };
 
 start();

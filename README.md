@@ -115,7 +115,7 @@ npm run test
 
 ## Video Walkthrough
 
-Click [here](https://drive.google.com/file/d/15LaAN_dBrrKa6AAhzCkfbqMINoFp7Lha/view?usp=sharing) to access the Video Walkthrough.
+Click [here](https://drive.google.com/file/d/1yGaw_WlplMP650TyzIMpLkQ4ei9-KR2w/view?usp=sharing) to access the Video Walkthrough.
 
 ## Questions
 
